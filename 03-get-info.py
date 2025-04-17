@@ -13,13 +13,15 @@ def analyze_file_types(directory):
             extension = Path(file).suffix.lower()
             extension_counts[extension] += 1
     
-    # Print results
-    print("File types found:")
+    # Print results in Markdown format
+    print("# File Types Found")
+    print("| Extension | Count |")
+    print("|-----------|-------|")
     for ext, count in extension_counts.most_common():
         if ext:  # If there is an extension
-            print(f"{ext}: {count} files")
+            print(f"| `{ext}` | {count} |")
         else:  # For files with no extension
-            print(f"No extension: {count} files")
+            print(f"| No extension | {count} |")
 
 # Usage
 try:
