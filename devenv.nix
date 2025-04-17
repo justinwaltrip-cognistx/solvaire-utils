@@ -1,10 +1,11 @@
 { pkgs, lib, config, inputs, ... }:
 
 {
-  packages = [
-    pkgs.awscli2
+  packages = with pkgs; [
+    awscli2
+    unzip
+    pv
   ];
-  dotenv.enable = true;
   languages.python = {
     enable = true;
     venv = {
@@ -15,4 +16,8 @@
       '';
     };
   };
+  dotenv.enable = true;
+  enterShell = ''
+    clear
+  '';
 }
