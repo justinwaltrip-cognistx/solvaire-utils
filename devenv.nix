@@ -5,6 +5,8 @@
     awscli2
     unzip
     pv
+    ghostscript_headless
+    libreoffice
   ];
   languages.python = {
     enable = true;
@@ -13,6 +15,9 @@
       requirements = ''
         boto3
         tqdm
+        pywin32
+        Pillow
+        PyPDF2
       '';
     };
   };

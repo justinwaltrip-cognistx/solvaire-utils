@@ -12,5 +12,5 @@ devenv.local.nix
 *.pem
 **/.DS_Store
 
-crown_royal_processing
+crown_royal_processing*
 CrownRoyalFiberCusts01.zip
