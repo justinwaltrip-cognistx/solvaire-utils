@@ -18,6 +18,9 @@
         pywin32
         Pillow
         PyPDF2
+        tabulate 
+        matplotlib 
+        seaborn
       '';
     };
   };
