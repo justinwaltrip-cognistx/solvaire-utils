@@ -11,4 +11,3 @@ devenv.local.nix
 .env
 *.pem
 **/.DS_Store
-.envrc
