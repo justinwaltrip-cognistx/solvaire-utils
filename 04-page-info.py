@@ -132,6 +132,6 @@ def get_pdf_page_distribution(data_dir, max_workers=4, force_recount=False):
 
 
 if __name__ == "__main__":
-    data_dir = "./crown_royal_processing_converted"
+    data_dir = "./supported_files"
     # Set force_recount=True if you want to recount pages regardless of existing results
-    get_pdf_page_distribution(data_dir, force_recount=False)
+    get_pdf_page_distribution(data_dir, force_recount=True)
