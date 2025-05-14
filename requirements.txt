@@ -1,0 +1,8 @@
+boto3
+tqdm
+pywin32
+Pillow
+PyPDF2
+tabulate 
+matplotlib 
+seaborn
