@@ -23,9 +23,11 @@
         seaborn
       '';
     };
+    version = "3.11"; # Explicitly specify Python 3.11
   };
   dotenv.enable = true;
   enterShell = ''
     clear
   '';
+  scripts.clean.exec = "rm -rf downloads extracted_files supported_files pdf_page_counts_supported_files.json";
 }
