@@ -5,6 +5,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from tqdm import tqdm
 
+SMALL_CELL_CUSTS_PREFIX = "SmallCellCusts02_FlattenedPortfolios"
+
 
 def upload_file(file_path, bucket_name, base_prefix):
     """Upload a single file to S3"""
@@ -12,7 +14,9 @@ def upload_file(file_path, bucket_name, base_prefix):
         s3_client = boto3.client("s3")
         file_name = os.path.basename(file_path)
         name_without_ext = os.path.splitext(file_name)[0]
-        s3_key = f"{base_prefix}/SmallCellCusts02/{name_without_ext}/{file_name}"
+        s3_key = (
+            f"{base_prefix}/{SMALL_CELL_CUSTS_PREFIX}/{name_without_ext}/{file_name}"
+        )
         s3_client.upload_file(file_path, bucket_name, s3_key)
         return True
     except Exception as e:
