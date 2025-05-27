@@ -3,7 +3,7 @@ set -ex
 # Create separate directories for zip and extracted files
 DOWNLOAD_DIR="downloads"
 EXTRACT_DIR="extracted_files"
-ZIP_FILE="SmallCellCusts02_FlattenedPortfolios.zip"
+ZIP_FILE="FiberCusts020305.zip"
 mkdir -p "$DOWNLOAD_DIR" "$EXTRACT_DIR"
 
 # Download with progress

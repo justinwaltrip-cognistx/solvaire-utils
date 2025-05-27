@@ -7,6 +7,7 @@
     pv
     ghostscript_headless
     libreoffice
+    zip
   ];
   languages.python = {
     enable = true;
@@ -19,5 +20,5 @@
     uv pip install -r requirements.txt
     clear
   '';
-  scripts.clean.exec = "rm -rf downloads extracted_files supported_files pdf_page_counts_supported_files.json";
+  scripts.clean.exec = "rm -rf downloads extracted_files supported_files* pdf_page_counts_supported_files.json output_files*";
 }
