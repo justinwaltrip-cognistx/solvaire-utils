@@ -50,19 +50,19 @@ def analyze_and_display_results(page_counts, pdf_files_count):
     stdev_pages = statistics.stdev(pages_list) if len(pages_list) > 1 else 0
 
     # Sort files by page count
-    sorted_files = sorted(page_counts.items(), key=lambda x: x[1], reverse=True)
+    # sorted_files = sorted(page_counts.items(), key=lambda x: x[1], reverse=True)
 
     # Print results
-    print("\nFiles sorted by page count (highlighting potential outliers):")
-    print("-" * 70)
-    print(f"{'Filename':<50} {'Pages':>8} {'Status':>10}")
-    print("-" * 70)
+    # print("\nFiles sorted by page count (highlighting potential outliers):")
+    # print("-" * 70)
+    # print(f"{'Filename':<50} {'Pages':>8} {'Status':>10}")
+    # print("-" * 70)
 
-    for filename, pages in sorted_files:
-        status = ""
-        if pages > mean_pages + (2 * stdev_pages):
-            status = "OUTLIER"
-        print(f"{filename:<50} {pages:>8} {status:>10}")
+    # for filename, pages in sorted_files:
+    #     status = ""
+    #     if pages > mean_pages + (2 * stdev_pages):
+    #         status = "OUTLIER"
+    #     print(f"{filename:<50} {pages:>8} {status:>10}")
 
     # Print summary statistics
     print("\nSummary Statistics:")

@@ -3,12 +3,12 @@ set -ex
 # Create separate directories for zip and extracted files
 DOWNLOAD_DIR="downloads"
 EXTRACT_DIR="extracted_files"
-ZIP_FILE="FiberCusts020305.zip"
+ZIP_FILE="POPs at RE Sites.zip"
 mkdir -p "$DOWNLOAD_DIR" "$EXTRACT_DIR"
 
 # Download with progress
 echo "Downloading zip file..."
-aws s3 cp s3://crown-royal/$ZIP_FILE "$DOWNLOAD_DIR/"
+aws s3 cp "s3://crown-royal/$ZIP_FILE" "$DOWNLOAD_DIR/"
 
 # Unzip with progress feedback
 echo "Extracting files..."
